@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "7a1910f6-1236-40b6-956e-c64c2e0b35ad",
+		"name": "Batman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40069533"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json(); \r",
+							"var accessToken = jsonData.value.accessToken.value; \r",
+							"\r",
+							"pm.environment.set(\"BatmanAccessToken\", accessToken); \r",
+							"pm.test(\"Статус 200\", function () {\r",
+							"    pm.response.to.have.status(200); \r",
+							"});\r",
+							"\r",
+							"pm.test(\"Ответ содержит пользователей\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.be.above(0);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Ответ содержит accessToken\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.value).to.have.property(\"accessToken\");\r",
+							"    pm.expect(jsonData.value.accessToken.value).to.be.a(\"string\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"admin\",\r\n    \"password\": \"admin\",\r\n    \"rememberMe\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://batman-test-batman-test.dev.dmms.kz/api/v1/administration/auth/login",
+					"protocol": "https",
+					"host": [
+						"batman-test-batman-test",
+						"dev",
+						"dmms",
+						"kz"
+					],
+					"path": [
+						"api",
+						"v1",
+						"administration",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

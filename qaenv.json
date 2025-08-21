@@ -1,0 +1,81 @@
+{
+	"id": "fdb95257-e717-4857-8fae-8251c6d16fcb",
+	"name": "QA",
+	"values": [
+		{
+			"key": "device",
+			"value": "https://develop-devices.dev-pm.dmms.kz",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1MTg4NmQ0ZS00OThhLTRkNDEtOGYwOC0zMDQ3MjRhNGNjODIiLCJsb2dpbiI6ImFkbWluIiwicGVybWlzc2lvbnMiOiIvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vd0U9Iiwicm9sZXMiOiJhZG1pbix0ZXN0MDIwMSIsImF1ZCI6ImRtbXMubXMiLCJpc3MiOiJkbW1zLm1zIiwiZXhwIjoxNzMyNzk1NjMzLCJuYmYiOjE3MzI3OTQ3MzMsImlhdCI6MTczMjc5NDczM30.8oA4x03aDm_BGKJV5OWzh7GOK8V9xeltfzUP07jkBPE",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "product_id",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "category_id",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "SigurQmsAccessToken",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "GOLANG",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "baseUrl",
+			"value": "https://aquaman-front-lamp-develop.dmms.kz/",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "flash",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjNjBhYTE0ZS05YTYzLTRiYTgtYTM3NS0wZmJkZjBlMWQ3NzMiLCJsb2dpbiI6ImFkbWluIiwicGVybWlzc2lvbnMiOiIvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy84SCIsInJvbGVzIjoiYWRtaW4iLCJhdWQiOiJkbW1zLm1zIiwiaXNzIjoiZG1tcy5tcyIsImV4cCI6MTc0NzMwOTcyMywibmJmIjoxNzQ3MzA2MTIzLCJpYXQiOjE3NDczMDYxMjN9.U5rVMXfzWvrK04dKjzBO_vBm-lW8sa87ghoCBedTA08",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "flashUrl",
+			"value": "https://develop-flash-qa.dev-pm.dmms.kz/",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "joker",
+			"value": "https://develop-joker-qa.dmms.kz/",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "QA",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "BatmanAccessToken",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2025-08-21T07:16:21.608Z",
+	"_postman_exported_using": "Postman/11.59.3"
+}
