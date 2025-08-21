@@ -20,8 +20,6 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: 🛠 Build Docker image
+      - name: 🛠 Build and Push Docker image
         run:  build -t xyedil/postman-test:latest .
-
-      - name: 📤 Push image to DockerHub
         run: docker push xyedil/postman-test:latest
