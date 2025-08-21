@@ -1,0 +1,27 @@
+name: Deploy Postman Test Runner
+
+on:
+  push:
+    branches:
+      - main  # запуск при пуше в main
+  workflow_dispatch: # запуск вручную из Actions
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repo
+        uses: actions/checkout@v3
+
+      - name: 🔑 Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: 🛠 Build Docker image
+        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/postman-tests:latest .
+
+      - name: 📤 Push image to DockerHub
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/postman-tests:latest
