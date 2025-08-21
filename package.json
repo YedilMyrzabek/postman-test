@@ -1,16 +1,18 @@
 {
-  "dependencies": {
-    "express": "^5.1.0"
-  },
   "name": "postman-test",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "newman run batmanenv2.json -e qaenv.json -r htmlextra --reporter-htmlextra-export report.html"
   },
+  "dependencies": {
+    "express": "^5.1.0",
+    "newman": "^6.2.1",
+    "newman-reporter-htmlextra": "^1.27.1"
+  },
+  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC"
